@@ -1,0 +1,112 @@
+.header {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 350%;
+}
+
+.my_button1, .my_button2, .my_button {
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-size: 150%;
+}
+
+.lbl1, .lbl2, .lbl3{
+    font-size: 150%;
+}
+
+.search1, .search2{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    .my_button1, .my_button2 {
+        margin: 10px;
+    }
+
+    .upper_buttons {
+        margin-top: auto;
+        margin-bottom: auto;
+        text-align: center;
+    }
+
+    #name {grid-area: name1;}
+    #description {grid-area: desc1;}
+    .lbl1 {grid-area: lbl1;}
+    .lbl2 {grid-area: lbl2;}
+
+    .form1
+    {
+        display: grid;
+        grid-template-areas:
+    'lbl1 name1 lbl2 desc1';
+        grid-gap: 10px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    #form2name {grid-area: name3;}
+    .lbl3 {grid-area: lbl3;}
+
+    .form2
+    {
+        display: grid;
+        grid-template-areas:
+    'lbl3 name3';
+        grid-gap: 10px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+
+}
+
+@media (max-width: 800px) {
+    .my_button1 {grid-area: but1;}
+    .my_button2 {grid-area: but2;}
+
+    .upper_buttons
+    {
+        display: grid;
+        grid-template-areas:
+    'but1'
+    'but2';
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    #name {grid-area: name1;}
+    #description {grid-area: desc1;}
+    .lbl1 {grid-area: lbl1;}
+    .lbl2 {grid-area: lbl2;}
+
+    .form1
+    {
+        display: grid;
+        grid-template-areas:
+    'lbl1'
+    'name1'
+    'lbl2'
+    'desc1';
+        grid-gap: 10px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    #form2name {grid-area: name3;}
+    .lbl3 {grid-area: lbl3;}
+
+    .form2
+    {
+        display: grid;
+        grid-template-areas:
+    'lbl3'
+    'name3';
+        grid-gap: 10px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+}
