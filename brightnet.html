@@ -2,39 +2,123 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rijksmuseum</title>
     <link rel="stylesheet" href="stylesheet.css">
     <script type="text/javascript" src="func.js"></script>
 </head>
 <body>
     <h1 class="header">
-        Rijksmuseum przeglądarka obrazów
+        Rijksmuseum collection viewer
     </h1>
 
     <div class="upper_buttons">
-        <input type="button" class="my_button1" onclick="search1Function()" value="Wyszukaj po nazwie i opisie">
-        <input type="button" class="my_button2" onclick="search2Function()" value="Wyszukaj po nazwie autora">
+        <input type="button" class="my_button1" onclick="search1Function()" value="Search by name and description">
+        <input type="button" class="my_button2" onclick="search2Function()" value="Search by author">
     </div>
     <br>
 
     <div class="search1">
         <form class="form1">
-            <label for="name" class="lbl1">Nazwa: </label> <input type="text" id="name">
-            <label for="description" class="lbl2">Opis: </label> <input type="text" id="description">
+            <label for="name" class="lbl1">Name: </label> <input type="text" id="name">
+            <label for="description" class="lbl2">Description: </label> <input type="text" id="description">
         </form>
         <br>
-        <input type="button" class="my_button" value="Szukaj1">
+        <input type="button" class="my_button" onclick="search1func()" value="Search1">
     </div>
-
-    <br>
 
     <div class="search2">
         <form class="form2">
-            <label for="form2name" class="lbl3">Nazwa: </label> <input type="text" id="form2name">
+            <label for="form2name" class="lbl3">Author: </label> <input type="text" id="form2name">
         </form>
         <br>
-        <input type="button" class="my_button" value="Szukaj2">
+        <input type="button" class="my_button" value="Search2">
     </div>
+    <br>
+
+    <div class="res_viewer">
+        <img class="res_image" alt="Image" >
+        <div class="res_data">
+            <p class="res_title">Title: </p>
+            <p class="res_author">Author: </p>
+            <p class="res_date">Date: </p>
+            <p class="res_desc">Description: </p>
+        </div>
+    </div>
+    <br>
+
+    <div class="res_viewer">
+        <img class="res_image" alt="Image" >
+        <div class="res_data">
+            <p class="res_title">Title: </p>
+            <p class="res_author">Author: </p>
+            <p class="res_date">Date: </p>
+            <p class="res_desc">Description: </p>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="res_viewer">
+        <img class="res_image" alt="Image" >
+        <div class="res_data">
+            <p class="res_title">Title: </p>
+            <p class="res_author">Author: </p>
+            <p class="res_date">Date: </p>
+            <p class="res_desc">Description: </p>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="res_viewer">
+        <img class="res_image" alt="Image" >
+        <div class="res_data">
+            <p class="res_title">Title: </p>
+            <p class="res_author">Author: </p>
+            <p class="res_date">Date: </p>
+            <p class="res_desc">Description: </p>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="res_viewer">
+        <img class="res_image" alt="Image" >
+        <div class="res_data">
+            <p class="res_title">Title: </p>
+            <p class="res_author">Author: </p>
+            <p class="res_date">Date: </p>
+            <p class="res_desc">Description: </p>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="res_viewer">
+        <img class="res_image" alt="Image" >
+        <div class="res_data">
+            <p class="res_title">Title: </p>
+            <p class="res_author">Author: </p>
+            <p class="res_date">Date: </p>
+            <p class="res_desc">Description: </p>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="res_viewer">
+        <img class="res_image" alt="Image" >
+        <div class="res_data">
+            <p class="res_title">Title: </p>
+            <p class="res_author">Author: </p>
+            <p class="res_date">Date: </p>
+            <p class="res_desc">Description: </p>
+        </div>
+    </div>
+    <br>
+
+
 
 
 </body>
