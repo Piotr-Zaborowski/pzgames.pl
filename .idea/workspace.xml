@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="19a0106c-c3bc-451a-985f-1ca737b444b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brightnet.html" beforeDir="false" afterPath="$PROJECT_DIR$/brightnet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/brightnet.html" beforeDir="false" afterPath="$PROJECT_DIR$/britenet.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/func.js" beforeDir="false" afterPath="$PROJECT_DIR$/func.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
     </list>
@@ -37,11 +37,11 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.brightnet.html (1)">
-    <configuration name="brightnet.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pzgames.pl/brightnet.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="JavaScript Debug.britenet.html">
+    <configuration name="brightnet.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Brightnet/brightnet.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="brightnet.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Brightnet/brightnet.html" useBuiltInWebServerPort="true">
+    <configuration name="britenet.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/pzgames.pl/britenet.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="func.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/func.js" working-dir="$PROJECT_DIR$">
@@ -49,7 +49,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.brightnet.html (1)" />
+        <item itemvalue="JavaScript Debug.britenet.html" />
         <item itemvalue="Node.js.func.js" />
         <item itemvalue="JavaScript Debug.brightnet.html" />
       </list>
@@ -66,7 +66,7 @@
       <workItem from="1627488198640" duration="3370000" />
       <workItem from="1627557252992" duration="9793000" />
       <workItem from="1627588467393" duration="38000" />
-      <workItem from="1627588573826" duration="17245000" />
+      <workItem from="1627588573826" duration="44980000" />
     </task>
     <servers />
   </component>
@@ -74,22 +74,22 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1627655875632">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1627824133334">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1627655875632" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1627655875631">
+    <state width="1899" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1627824133334" />
+    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1627824133333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1627655875631" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1627655875631">
+    <state width="1899" height="282" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1627824133333" />
+    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1627824133333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1627655875631" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1627655875632">
+    <state width="1899" height="282" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1627824133333" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1627824133333">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1627655875632" />
+    <state width="1899" height="282" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1627824133333" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1627659030955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -32,9 +32,13 @@
             <label for="form2name" class="lbl3">Author: </label> <input type="text" id="form2name">
         </form>
         <br>
-        <input type="button" class="my_button" value="Search2">
+        <input type="button" class="my_button" onclick="search2func()" value="Search2">
     </div>
     <br>
+
+    <div class="no_res_class">
+        No results found
+    </div>
 
     <div class="res_viewer">
         <img class="res_image" alt="Image" >
@@ -117,6 +121,21 @@
         </div>
     </div>
     <br>
+
+    <div class="bottom_page_panel">
+        <div class="page_selector">
+            <input type="button" class="button_first" onclick="goToFirst()" value="<<">
+            <input type="button" class="button_previous" onclick="goToPrev()" value="<">
+            <p class="page_numerator" id="page_selector_text1">Page:</p>
+            <input type="text" id="pagee" onkeydown="updatePage(this)">
+            <p class="page_numerator" id="page_selector_text2">/10</p>
+            <input type="button" class="button_next" onclick="goToNext()" value=">">
+            <input type="button" class="button_last" onclick="goToLast()" value=">>">
+        </div>
+
+
+    </div>
+
 
 
 

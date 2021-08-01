@@ -4,15 +4,33 @@
     font-size: 350%;
 }
 
-.my_button1, .my_button2, .my_button {
+.my_button1, .my_button2, .my_button, .button_first, .button_previous, .button_next, .button_last{
     border-radius: 8px;
     border: none;
     padding: 10px;
     font-size: 150%;
 }
 
+#pagee{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 150%;
+    max-width: 3em;
+    text-align: center;
+}
+
+.page_numerator{
+    font-size: 150%;
+    font-family: "Times New Roman", Times, serif;
+}
+
 .lbl1, .lbl2, .lbl3{
     font-size: 150%;
+}
+
+.no_res_class{
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 250%;
 }
 
 .search1, .search2{
@@ -24,6 +42,24 @@
 .res_viewer{
     outline-style: solid;
     outline-color: black;
+}
+
+.button_first {grid-area: but1;}
+.button_previous {grid-area: but2;}
+#pagee {grid-area: pg;}
+.button_next {grid-area: but3;}
+.button_last {grid-area: but4;}
+
+#page_selector_text1 {grid-area: pst1;}
+#page_selector_text2 {grid-area: pst2;}
+
+.page_selector{
+    display: grid;
+    grid-template-areas:
+    'but1 but2 pst1 pg pst2 but3 but4';
+    grid-gap: 10px;
+    padding: 10px;
+    justify-content: center;
 }
 
 .res_title, .res_author, .res_date, .res_desc{
@@ -70,7 +106,7 @@
     }
 
     .res_image{
-        max-width: 200pt;
+        width: 200pt;
     }
 
     .res_image {grid-area: res_image}
@@ -85,6 +121,7 @@
         padding: 10px;
         justify-content: left;
     }
+
 
 
 }
