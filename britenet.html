@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rijksmuseum</title>
     <link rel="stylesheet" href="stylesheet.css">
-    <script type="text/javascript" src="func.js"></script>
 </head>
 <body>
     <h1 class="header">
@@ -44,7 +43,7 @@
     </div>
 
     <div class="res_viewer">
-        <img class="res_image" alt="Image" >
+        <img class="res_image" alt="Image" onclick="showModal(this)">
         <div class="res_data">
             <p class="res_title">Title: </p>
             <p class="res_author">Author: </p>
@@ -55,19 +54,7 @@
     <br>
 
     <div class="res_viewer">
-        <img class="res_image" alt="Image" >
-        <div class="res_data">
-            <p class="res_title">Title: </p>
-            <p class="res_author">Author: </p>
-            <p class="res_date">Date: </p>
-            <p class="res_desc">Description: </p>
-        </div>
-    </div>
-    <br>
-
-
-    <div class="res_viewer">
-        <img class="res_image" alt="Image" >
+        <img class="res_image" alt="Image" onclick="showModal(this)">
         <div class="res_data">
             <p class="res_title">Title: </p>
             <p class="res_author">Author: </p>
@@ -79,7 +66,7 @@
 
 
     <div class="res_viewer">
-        <img class="res_image" alt="Image" >
+        <img class="res_image" alt="Image" onclick="showModal(this)">
         <div class="res_data">
             <p class="res_title">Title: </p>
             <p class="res_author">Author: </p>
@@ -91,7 +78,7 @@
 
 
     <div class="res_viewer">
-        <img class="res_image" alt="Image" >
+        <img class="res_image" alt="Image" onclick="showModal(this)">
         <div class="res_data">
             <p class="res_title">Title: </p>
             <p class="res_author">Author: </p>
@@ -103,7 +90,7 @@
 
 
     <div class="res_viewer">
-        <img class="res_image" alt="Image" >
+        <img class="res_image" alt="Image" onclick="showModal(this)">
         <div class="res_data">
             <p class="res_title">Title: </p>
             <p class="res_author">Author: </p>
@@ -115,7 +102,19 @@
 
 
     <div class="res_viewer">
-        <img class="res_image" alt="Image" >
+        <img class="res_image" alt="Image" onclick="showModal(this)">
+        <div class="res_data">
+            <p class="res_title">Title: </p>
+            <p class="res_author">Author: </p>
+            <p class="res_date">Date: </p>
+            <p class="res_desc">Description: </p>
+        </div>
+    </div>
+    <br>
+
+
+    <div class="res_viewer">
+        <img class="res_image" alt="Image" onclick="showModal(this)">
         <div class="res_data">
             <p class="res_title">Title: </p>
             <p class="res_author">Author: </p>
@@ -135,13 +134,15 @@
             <input type="button" class="button_next" onclick="goToNext()" value=" > ">
             <input type="button" class="button_last" onclick="goToLast()" value=">>">
         </div>
-
-
     </div>
 
 
-
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
 
 
 </body>
+<script type="text/javascript" src="func.js"></script>
 </html>

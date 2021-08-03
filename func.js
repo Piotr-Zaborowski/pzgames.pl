@@ -207,3 +207,16 @@ function getDescription()
     }
 }
 
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+function showModal(elem){
+    modal.style.display = "block";
+    modalImg.src = elem.src;
+}
+
+var closeButton = document.getElementsByClassName("close")[0];
+closeButton.onclick = function() {
+    modal.style.display = "none";
+}
+
+
