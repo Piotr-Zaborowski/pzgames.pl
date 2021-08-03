@@ -12,7 +12,7 @@ const resAuthor = document.getElementsByClassName("res_author");
 const resDate = document.getElementsByClassName("res_date");
 const resDesc = document.getElementsByClassName("res_desc");
 
-const bottomPagePanel = document.getElementsByClassName("bottom_page_panel");
+const bottomPagePanel = document.getElementsByClassName("page_selector");
 
 document.addEventListener('DOMContentLoaded', () =>
 {

@@ -51,16 +51,6 @@
 }
 
 
-
-.page_selector{
-    display: grid;
-    grid-template-areas:
-    'but1 but2 pst1 pg pst2 but3 but4';
-    grid-gap: 10px;
-    padding: 10px;
-    justify-content: center;
-}
-
 .res_title, .res_author, .res_date, .res_desc{
     font-size: 150%;
 }
@@ -253,8 +243,8 @@
     .page_selector{
         display: grid;
         grid-template-areas:
-                'pst1 pg pst2'
-                'but1 but2 but3 but4';
+        'pst1 pst1 pst1 pst1 pg pg pg pg pst2 pst2 pst2 pst2'
+        'but1 but1 but1 but2 but2 but2 but3 but3 but3 but4 but4 but4';
         grid-gap: 10px;
         padding: 10px;
         justify-content: center;
