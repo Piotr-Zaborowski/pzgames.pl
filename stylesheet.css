@@ -17,6 +17,13 @@
     font-size: 150%;
 }
 
+.res_desc_det{
+    border: none;
+    cursor: pointer;
+    font-size: 150%;
+    font-family: "Times New Roman", Times, serif;
+}
+
 #pagee{
     font-family: "Times New Roman", Times, serif;
     font-size: 150%;
@@ -93,6 +100,15 @@
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.res_desc_det summary::before {
+    content:"Read More";
+}
+
+/* By using [open] we can define different styles when the disclosure widget is open */
+.res_desc_det[open] summary::before {
+    content:"Read Less";
 }
 
 .button_first {grid-area: but1;}

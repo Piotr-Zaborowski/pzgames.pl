@@ -10,7 +10,10 @@ const resImage = document.getElementsByClassName("res_image");
 const resTitle = document.getElementsByClassName("res_title");
 const resAuthor = document.getElementsByClassName("res_author");
 const resDate = document.getElementsByClassName("res_date");
+
 const resDesc = document.getElementsByClassName("res_desc");
+const resDescDet = document.getElementsByClassName("res_desc_det");
+const resDescExt = document.getElementsByClassName("res_desc_ext");
 
 const bottomPagePanel = document.getElementsByClassName("page_selector");
 
@@ -28,6 +31,9 @@ function disableResViewers()
     for (let x=0; x<7; x++ )
     {
         resViewers[x].style.display = "none";
+        resDescDet[x].style.display = "none";
+        resDescDet[x].removeAttribute("open");
+
     }
     bottomPagePanel[0].style.display = "none";
 }
@@ -125,13 +131,11 @@ function search2func()
 
 function searchByUrl(url)
 {
-    console.log(url);
+    //console.log(url);
     objArtNumberArr = [];
     fetch(url)
         .then(res => res.json())
         .then(out =>{
-
-                console.log(out.count);
                 disableResViewers()
                 if(out.count==0)
                 {
@@ -149,7 +153,7 @@ function searchByUrl(url)
                         }
                     }
                     changeNumerator(pageNumber);
-                    console.log(pageNumber);
+                    //console.log(pageNumber);
                 }
 
                 for (let objArt in out.artObjects)
@@ -192,10 +196,25 @@ function getDescription()
         fetch(collectionDataUrl)
             .then(res => res.json())
             .then(out =>{
-                    resDesc[X].innerHTML="Description: "+out.artObject.description;
-                    if(out.artObject.description==null)
+                let fullDesc = out.artObject.description;
+                    if(fullDesc==null)
                     {
                         resDesc[X].innerHTML="Description: No data";
+                    }
+                    else {
+                        let index = fullDesc.indexOf(". ");
+                        if(index==-1)
+                        {
+                            resDesc[X].innerHTML="Description: "+fullDesc;
+                        }
+                        else
+                        {
+                            let firstPart=fullDesc.substr(0, index+1);
+                            let secondPart=fullDesc.substr(index + 1);
+                            resDesc[X].innerHTML="Description: "+firstPart;
+                            resDescDet[X].style.display = "block";
+                            resDescExt[X].innerHTML=secondPart;
+                        }
                     }
                 }
             )
@@ -218,5 +237,6 @@ var closeButton = document.getElementsByClassName("close")[0];
 closeButton.onclick = function() {
     modal.style.display = "none";
 }
+
 
 
