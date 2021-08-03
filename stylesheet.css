@@ -4,6 +4,12 @@
     font-size: 350%;
 }
 
+.search_by{
+    font-size: 250%;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
 .my_button1, .my_button2, .my_button, .button_first, .button_previous, .button_next, .button_last{
     border-radius: 8px;
     border: none;
