@@ -104,7 +104,6 @@ body{
     content:"Read More ";
 }
 
-/* By using [open] we can define different styles when the disclosure widget is open */
 .res_desc_det[open] summary::before {
     content:"Read Less ";
 }
