@@ -41,7 +41,7 @@ function disableResViewers()
 function updatePage(ele)
 {
     if(event.key === 'Enter') {
-        let num = ele.value.replace(/[^0-9]/g,'');
+        let num = ele.value.replace(/[^0-9]/g,'');  //Regex to strip all values except numbers
         changePage(num);
     }
 }
@@ -75,7 +75,7 @@ let totalPages=1;
 
 function changeNumerator(page)
 {
-    document.getElementById("pagee").value=pageNumber;
+    document.getElementById("update_page").value=pageNumber;
     document.getElementById("page_selector_text2").innerText="/"+totalPages;
 }
 
@@ -104,7 +104,6 @@ function changePage(page)
     if(page<1) page=1;
     if(page>totalPages) page=totalPages;
     pageNumber=page;
-    //changeNumerator(page);
     let tempUrl = completeUrl.replace("&ps=7&p=1","&ps=7&p="+page);
     searchByUrl(tempUrl);
 }
@@ -123,15 +122,14 @@ function search2func()
 {
     pageNumber=1;
     let searchBy = document.getElementById("form2name").value;
-    console.log(searchBy)
     let url=baseURL + apiKey + "&involvedMaker=Q".replace("Q", searchBy);
     completeUrl=url;
     searchByUrl(url);
 }
 
+//Function requesting data from server
 function searchByUrl(url)
 {
-    //console.log(url);
     objArtNumberArr = [];
     fetch(url)
         .then(res => res.json())
@@ -153,17 +151,12 @@ function searchByUrl(url)
                         }
                     }
                     changeNumerator(pageNumber);
-                    //console.log(pageNumber);
                 }
 
                 for (let objArt in out.artObjects)
                 {
                     let objNumber=out.artObjects[objArt].objectNumber;
-                    //console.log(objNumber)
                     objArtNumberArr.push(objNumber);
-
-                    //console.log(out.artObjects[objArt].webImage.url)
-                    //console.log(out.artObjects[objArt].longTitle)
 
                     let namesArr = out.artObjects[objArt].longTitle.split(',');
 
@@ -175,7 +168,6 @@ function searchByUrl(url)
                     resDate[objArt].innerHTML="Date: "+namesArr[namesArr.length-1];
 
                 }
-                //return 1;
             }
         )
         .then(out=>
@@ -185,14 +177,13 @@ function searchByUrl(url)
         .catch(err => console.log(err));
 }
 
-
+//Function requesting description from server
 function getDescription()
 {
     for (let X in objArtNumberArr)
     {
         let collectionDataUrl = baseURL+objArtNumberArr[X]+key;
         resDesc[X].innerHTML="Description: ";
-        //console.log(collectionDataUrl);
         fetch(collectionDataUrl)
             .then(res => res.json())
             .then(out =>{
@@ -226,6 +217,7 @@ function getDescription()
     }
 }
 
+//Function to open Modal window
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img01");
 function showModal(elem){
@@ -233,6 +225,7 @@ function showModal(elem){
     modalImg.src = elem.src;
 }
 
+//Function to close Modal window
 var closeButton = document.getElementsByClassName("close")[0];
 closeButton.onclick = function() {
     modal.style.display = "none";

@@ -1,13 +1,15 @@
+body{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
 .header {
     text-align: center;
-    font-family: "Times New Roman", Times, serif;
     font-size: 350%;
 }
 
 .search_by{
     font-size: 250%;
     text-align: center;
-    font-family: "Times New Roman", Times, serif;
 }
 
 .my_button1, .my_button2, .my_button, .button_first, .button_previous, .button_next, .button_last{
@@ -21,11 +23,9 @@
     border: none;
     cursor: pointer;
     font-size: 150%;
-    font-family: "Times New Roman", Times, serif;
 }
 
-#pagee{
-    font-family: "Times New Roman", Times, serif;
+#update_page{
     font-size: 150%;
     max-width: 3em;
     text-align: center;
@@ -33,7 +33,6 @@
 
 .page_numerator{
     font-size: 150%;
-    font-family: "Times New Roman", Times, serif;
 }
 
 .lbl1, .lbl2, .lbl3{
@@ -42,7 +41,6 @@
 
 .no_res_class{
     text-align: center;
-    font-family: "Times New Roman", Times, serif;
     font-size: 250%;
 }
 
@@ -103,17 +101,17 @@
 }
 
 .res_desc_det summary::before {
-    content:"Read More";
+    content:"Read More ";
 }
 
 /* By using [open] we can define different styles when the disclosure widget is open */
 .res_desc_det[open] summary::before {
-    content:"Read Less";
+    content:"Read Less ";
 }
 
 .button_first {grid-area: but1;}
 .button_previous {grid-area: but2;}
-#pagee {grid-area: pg;}
+#update_page {grid-area: pg;}
 .button_next {grid-area: but3;}
 .button_last {grid-area: but4;}
 
