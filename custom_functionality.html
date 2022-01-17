@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog food amount calculator</title>
+
+    <style>
+
+        body, html{
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        .calc
+        {
+            margin: 10pt;
+            padding: 10pt;
+            justify-content: center;
+            display: flow;
+
+
+        }
+
+        .big_text
+        {
+            font-size: 250%;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .text_normal
+        {
+            font-size: 100%;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .dog_size_class
+        {
+            font-size: 200%;
+        }
+
+        .elem_form_style{
+            margin:0 auto;
+            display:block;
+        }
+
+        .my_button{
+            border-radius: 8px;
+            border: none;
+            padding: 10px;
+            font-size: 150%;
+            justify-content: center;
+            margin:0 auto;
+            display:block;
+        }
+
+        .search_input{
+            text-align: center;
+            display: block;
+            min-width: 35%;
+            font-size: 100%;
+            margin:10pt auto;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="calc">
+        <p class="big_text">Dog food amount calculator</p>
+        <form class="dog_size_class">
+            <div align="center">
+                <p>Please select your dog physique:</p>
+                <input type="radio" id="UNDERWEIGHT" name="dog_size"  value="UNDERWEIGHT">
+                <label for="UNDERWEIGHT">UNDERWEIGHT</label><br>
+                <input type="radio" id="NORMAL" name="dog_size" value="NORMAL">
+                <label for="NORMAL">NORMAL</label><br>
+                <input type="radio" id="THICK" name="dog_size" value="THICK">
+                <label for="THICK">THICK</label>
+            </div>
+            <p class="text_normal">Age:</p>
+            <input type="text" id="search_age" class="search_input" placeholder="Enter age in years">
+            <p class="text_normal">Weight:</p>
+            <input type="text" id="search_weight" class="search_input" placeholder="Enter weight in Kg">
+            <p class="text_normal">TIme:</p>
+            <input type="text" id="time_amount" class="search_input" placeholder="Enter duration in days">
+            <input type="button" class="my_button" id="b1" value="Calculate" style="background-color: rgba(25,255,0,0.65)" onclick="searchByFunction()">
+            <p id="answer" class="text_normal"></p>
+        </form>
+    </div>
+</body>
+
+<script>
+
+    let age=document.getElementById("search_age");
+    let weight=document.getElementById("search_weight");
+    let time=document.getElementById("time_amount");
+
+    const answ = document.getElementById("answer");
+
+    function searchByFunction()
+    {
+        let optionSelected = Array.from(document.getElementsByName("dog_size")).find(r => r.checked).value;
+        let def_value = 0;
+
+        if (optionSelected==="UNDERWEIGHT") def_value=1.2;
+        if (optionSelected==="NORMAL") def_value=1.0;
+        if (optionSelected==="THICK") def_value=0.7;
+
+        let ageInt = parseInt(age.value)
+        let weightInt = parseInt(weight.value)
+        let timeInt = parseInt(time.value)
+
+        let multiplier = 0;
+
+        if(ageInt<3)
+        {
+            multiplier=0.9
+        }
+        else
+        {
+            if(ageInt>9)
+            {
+                multiplier=0.7;
+            }
+            else
+            {
+                multiplier=1.0
+            }
+        }
+
+            let res = def_value*multiplier*weightInt*10*timeInt;
+
+            if(res.toString()!="NaN")
+            {
+
+                answ.innerHTML="You should buy "+res.toString()+" grams of food"
+            }
+
+
+
+
+
+
+    }
+
+
+</script>
+
+</html>
